@@ -1,0 +1,84 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/admin.css" %}"/>
+{% endblock %}
+
+{% block title %}
+    {% trans '订单' %} {{ order.id }} {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+        <a href="{% url "admin:index" %}">{% trans '首页' %}</a> ›
+        <a href="{% url "admin:orders_order_changelist" %}">{% trans '订单' %}</a> ›
+        <a href="{% url "admin:orders_order_change" order.id %}">{% trans '订单号' %} {{ order.id }}</a> › {% trans '详情' %}
+    </div>
+{% endblock %}
+
+{% block content %}
+    <h1>{% trans '订单号' %} {{ order.id }}</h1>
+    <ul class="object-tools">
+        <li>
+            <a href="#" onclick="window.print();">{% trans '打印订单' %}</a>
+        </li>
+    </ul>
+    <table>
+        <tr>
+            <th>{% trans '下单时间' %}</th>
+            <td>{{ order.created }}</td>
+        </tr>
+        <tr>
+            <th>{% trans '买家' %}</th>
+            <td>{{ order.customer_name }}</td>
+        </tr>
+        <tr>
+            <th>{% trans '邮箱' %}</th>
+            <td><a href="mailto:{{ order.email }}">{{ order.email }}</a></td>
+        </tr>
+        <tr>
+            <th>{% trans '收件地址' %}</th>
+            <td>{{ order.address }}, {{ order.postal_code }} {{ order.city }}</td>
+        </tr>
+        <tr>
+            <th>{% trans '订单总额' %}</th>
+            <td>¥{{ order.get_total_cost }}</td>
+        </tr>
+        <tr>
+            <th>{% trans '订单状态' %}</th>
+            <td>{% if order.paid %}{% trans '已付款' %}{% else %}{% trans '未付款' %}{% endif %}</td>
+        </tr>
+    </table>
+
+    <div class="module">
+        <div class="tabular inline-related last-related">
+            <table>
+                <h2>{% trans '购买商品' %}</h2>
+                <thead>
+                <tr>
+                    <th>{% trans '商品' %}</th>
+                    <th>{% trans '价格' %}</th>
+                    <th>{% trans '数量' %}</th>
+                    <th>{% trans '合计' %}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in order.items.all %}
+                    <tr class="row{% cycle "1" "2" %}">
+                        <td>{{ item.product.name }}</td>
+                        <td class="num">¥ {{ item.price }}</td>
+                        <td class="num">{{ item.quantity }}</td>
+                        <td class="num">¥ {{ item.get_cost }}</td>
+                    </tr>
+                {% endfor %}
+                <tr class="total">
+                    <td colspan="3">{% trans '总计' %}</td>
+                    <td class="num">¥ {{ order.get_total_cost }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

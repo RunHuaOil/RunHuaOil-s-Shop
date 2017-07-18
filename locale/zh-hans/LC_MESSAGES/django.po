@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-03 19:24+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/admin/orders/order/detail.html:10
+#: templates/admin/orders/order/detail.html:16
+msgid "订单"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:15
+msgid "首页"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:17
+#: templates/admin/orders/order/detail.html:22
+msgid "订单号"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:17
+msgid "详情"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:25
+msgid "打印订单"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:30
+msgid "下单时间"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:34
+msgid "买家"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:38
+msgid "邮箱"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:42
+msgid "收件地址"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:46
+msgid "订单总额"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:50
+msgid "订单状态"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:51
+#: templates/orders/order/pdf.html:46
+msgid "已付款"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:51
+#: templates/orders/order/pdf.html:46
+msgid "未付款"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:58
+#: templates/orders/order/pdf.html:19
+msgid "购买商品"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:61 templates/cart/detail.html:11
+#: templates/orders/order/pdf.html:23
+msgid "商品"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:62
+msgid "价格"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:63 templates/cart/detail.html:12
+#: templates/orders/order/pdf.html:25
+msgid "数量"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:64 templates/cart/detail.html:65
+#: templates/orders/order/pdf.html:26
+msgid "合计"
+msgstr ""
+
+#: templates/admin/orders/order/detail.html:77
+#: templates/orders/order/create.html:25 templates/orders/order/pdf.html:39
+msgid "总计"
+msgstr ""
+
+#: templates/base.html:7 templates/base.html:12
+#: templates/orders/order/pdf.html:4
+msgid "润滑油的小店"
+msgstr ""
+
+#: templates/base.html:17
+msgid "语言"
+msgstr ""
+
+#: templates/base.html:33
+msgid "购物车"
+msgstr ""
+
+#: templates/base.html:35
+#, python-format
+msgid ""
+"\n"
+"                        %(total_items)s 件商品, ¥ %(total_price)s\n"
+"                    "
+msgstr ""
+
+#: templates/base.html:40
+msgid "您的购物车是空的."
+msgstr ""
+
+#: templates/cart/detail.html:4 templates/cart/detail.html:6
+msgid "您的购物车"
+msgstr ""
+
+#: templates/cart/detail.html:10
+msgid "商品图片"
+msgstr ""
+
+#: templates/cart/detail.html:13
+msgid "操作"
+msgstr ""
+
+#: templates/cart/detail.html:14 templates/orders/order/pdf.html:24
+msgid "单价"
+msgstr ""
+
+#: templates/cart/detail.html:15
+msgid "总价格"
+msgstr ""
+
+#: templates/cart/detail.html:37
+msgid "修改"
+msgstr ""
+
+#: templates/cart/detail.html:39 templates/shop/product/detail.html:15
+msgid "库存"
+msgstr ""
+
+#: templates/cart/detail.html:41
+msgid "删除"
+msgstr ""
+
+#: templates/cart/detail.html:49
+msgid "小计"
+msgstr ""
+
+#: templates/cart/detail.html:55 templates/orders/order/create.html:20
+msgid "优惠码"
+msgstr ""
+
+#: templates/cart/detail.html:56 templates/orders/order/create.html:20
+msgid "折扣"
+msgstr ""
+
+#: templates/cart/detail.html:71
+msgid "使用优惠码"
+msgstr ""
+
+#: templates/cart/detail.html:74
+msgid "兑换"
+msgstr ""
+
+#: templates/cart/detail.html:85
+msgid "继续购物"
+msgstr ""
+
+#: templates/cart/detail.html:86
+msgid "结算"
+msgstr ""
+
+#: templates/orders/order/create.html:7
+msgid "填写收件资料"
+msgstr ""
+
+#: templates/orders/order/create.html:10
+msgid "您的订单如下"
+msgstr ""
+
+#: templates/orders/order/create.html:30
+msgid "确认下单"
+msgstr ""
+
+#: templates/orders/order/pdf.html:6
+msgid "发票号码"
+msgstr ""
+
+#: templates/orders/order/pdf.html:12
+msgid "收款人"
+msgstr ""
+
+#: templates/payment/canceled.html:4
+msgid "支付失败"
+msgstr ""
+
+#: templates/payment/canceled.html:5
+msgid "支付过程出现了问题,已取消支付."
+msgstr ""
+
+#: templates/payment/done.html:4
+msgid "付款成功"
+msgstr ""
+
+#: templates/payment/done.html:5
+msgid "您的付款已成功"
+msgstr ""
+
+#: templates/payment/process.html:3
+msgid "支付页面"
+msgstr ""
+
+#: templates/payment/process.html:6
+msgid "支付"
+msgstr ""
+
+#: templates/shop/product/detail.html:19
+msgid "加入购物车"
+msgstr ""
+
+#: templates/shop/product/detail.html:24
+msgid "买了这个商品的人还买了以下商品"
+msgstr ""
+
+#: templates/shop/product/list.html:6 templates/shop/product/list.html:24
+msgid "所有商品"
+msgstr ""
+
+#: templates/shop/product/list.html:11
+msgid "商品分类"
+msgstr ""
+
+#: templates/shop/product/list.html:14
+msgid "所有"
+msgstr ""

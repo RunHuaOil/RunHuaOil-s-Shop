@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "支付页面" %}{% endblock %}
+
+{% block content %}
+    <h1>PayPal {% trans "支付" %}</h1>
+    {{ form.render }}
+{% endblock %}

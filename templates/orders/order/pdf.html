@@ -1,0 +1,49 @@
+{% load i18n %}
+<html>
+<body>
+     <h1>{% trans "润滑油的小店" %}</h1>
+     <p>
+       {% trans "发票号码" %}: {{ order.id }} </br>
+       <span class="secondary">
+         {{ order.created|date:"Y, M d" }}
+       </span>
+     </p>
+
+     <h3>{% trans "收款人" %}</h3>
+     <p>
+       {{ order.customer_name }}<br>
+       {{ order.email }}<br>
+       {{ order.address }}<br>
+       {{ order.postal_code }}, {{ order.city }}
+     </p>
+     <h3>{% trans "购买商品" %}</h3>
+     <table>
+       <thead>
+         <tr>
+           <th>{% trans "商品" %}</th>
+           <th>{% trans "单价" %}</th>
+           <th>{% trans "数量" %}</th>
+           <th>{% trans "合计" %}</th>
+         </tr>
+       </thead>
+       <tbody>
+         {% for item in order.items.all %}
+           <tr class="row{% cycle "1" "2" %}">
+             <td>{{ item.product.name }}</td>
+             <td class="num">¥{{ item.price }}</td>
+             <td class="num">{{ item.quantity }}</td>
+             <td class="num">¥{{ item.get_cost }}</td>
+           </tr>
+         {% endfor %}
+         <tr class="total">
+           <td colspan="3">{% trans "总计" %}</td>
+           <td class="num">¥ {{ order.get_total_cost }}</td>
+         </tr>
+       </tbody>
+     </table>
+
+     <span class="{% if order.paid %}paid{% else %}pending{% endif %}">
+       {% if order.paid %}{% trans "已付款" %}{% else %}{% trans "未付款" %}{% endif %}
+     </span>
+</body>
+</html>

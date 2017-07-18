@@ -1,0 +1,9 @@
+rabbitmq-server
+
+src/redis-server
+
+celery -A myshop worker -l info
+('myshop': myshop.celery.py -> app = Celery('myshop'))
+
+
+celery -A myshop flower   ;监控 celery
